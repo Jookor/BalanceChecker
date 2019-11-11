@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-D:\Audio\BalanceChecker\obj\Debug\
+D:\Audio\git\HBC\BalanceChecker\obj\Debug\
 BalanceChecker
 none
 false
 DEBUG;TRACE
-D:\Audio\BalanceChecker\App.xaml
+D:\Audio\git\HBC\BalanceChecker\App.xaml
 11151548125
 
 81490581115
-15-1869263940
+15167067222
 MainWindow.xaml;
 
-True
+False
 
