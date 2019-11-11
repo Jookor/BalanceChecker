@@ -50,17 +50,25 @@ namespace BalanceChecker
                 if (openFileDialog.ShowDialog() == true)
                     mediaPlayer.Open(new Uri(openFileDialog.FileName)); 
             }
-            Record.RecordAudio();
-            mediaPlayer.Play();
-            dispatcherTimer.Tick += dispatcherTimer_Tick;
-            dispatcherTimer.Interval = new TimeSpan(0, 0, 10);
-            dispatcherTimer.Start();
-            btnStart.IsEnabled = false;
-            btnStart.Content = "Recording...";
 
-            if (side == "Left")
+            if (mediaPlayer.Source != null)
             {
-                allDone = true;
+                Record.RecordAudio();
+                mediaPlayer.Play();
+                dispatcherTimer.Tick += dispatcherTimer_Tick;
+                dispatcherTimer.Interval = new TimeSpan(0, 0, 10);
+                dispatcherTimer.Start();
+                btnStart.IsEnabled = false;
+                btnStart.Content = "Recording...";
+
+                if (side == "Left")
+                {
+                    allDone = true;
+                } 
+            }
+            else
+            {
+                MessageBox.Show("Please select audio file!");
             }
         }
 

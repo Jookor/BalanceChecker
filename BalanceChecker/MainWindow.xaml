@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BalanceChecker"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="BCH" Height="250" Width="400">
     <Grid>
         <StackPanel>
             <TextBlock Text="Balance checker" VerticalAlignment="Center" HorizontalAlignment="Center" Padding="30" FontSize="40"/>
