@@ -10,7 +10,7 @@
         <StackPanel>
             <TextBlock Text="Balance checker" VerticalAlignment="Center" HorizontalAlignment="Center" Padding="30" FontSize="40"/>
             <Button x:Name="btnStart" Content="Record right side headphone" Width="250" VerticalAlignment="Center" Click="BtnStart_Click"/>
-            <Label x:Name="lblStatus" Content="" FontSize="15" VerticalAlignment="Center" HorizontalAlignment="Center" Padding="10"/>
+            <Label x:Name="lblStatus" Content="" MinWidth="90" FontSize="15" VerticalAlignment="Center" HorizontalAlignment="Center" Padding="10" Margin="10"/>
         </StackPanel>
     </Grid>
 </Window>
