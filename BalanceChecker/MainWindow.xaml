@@ -5,10 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:BalanceChecker"
         mc:Ignorable="d"
-        Title="BCH" Height="250" Width="400">
+        Title="BCH" Height="300" Width="400">
     <Grid>
         <StackPanel>
             <TextBlock Text="Balance checker" VerticalAlignment="Center" HorizontalAlignment="Center" Padding="30" FontSize="40"/>
+            <Label x:Name="lblFile" Content="" VerticalAlignment="Center" FontSize="20" HorizontalAlignment="Center"/>
+            <Button x:Name="btnSelect" Content="Select audio file" Width="250" VerticalAlignment="Center" Margin="10" Click="BtnSelect_Click" />
             <Button x:Name="btnStart" Content="Record right side headphone" Width="250" VerticalAlignment="Center" Click="BtnStart_Click"/>
             <Label x:Name="lblStatus" Content="" MinWidth="90" FontSize="15" VerticalAlignment="Center" HorizontalAlignment="Center" Padding="10" Margin="10"/>
         </StackPanel>

@@ -34,7 +34,7 @@ namespace BalanceChecker
             side = "Right";
             DateTime date = DateTime.UtcNow;
             filename = date.ToString().Replace(".", "").Replace(":", "").Replace(" ", "_");
-            btnStart.IsEnabled = true;
+            btnStart.IsEnabled = false;
         }
 
         private void BtnStart_Click(object sender, RoutedEventArgs e)
@@ -45,10 +45,7 @@ namespace BalanceChecker
                 allDone = false;
                 lblStatus.Content = "";
                 lblStatus.Visibility = Visibility.Hidden;
-                OpenFileDialog openFileDialog = new OpenFileDialog();
-                openFileDialog.Filter = "MP3 files (*.mp3)|*.mp3|All files (*.*)|*.*";
-                if (openFileDialog.ShowDialog() == true)
-                    mediaPlayer.Open(new Uri(openFileDialog.FileName)); 
+                
             }
 
             if (mediaPlayer.Source != null)
@@ -99,6 +96,20 @@ namespace BalanceChecker
                 btnStart.IsEnabled = true;
                 side = "Left";
                 btnStart.Content = "Record left channel";
+            }
+        }
+
+        private void BtnSelect_Click(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "MP3 files (*.mp3)|*.mp3|All files (*.*)|*.*";
+            if (openFileDialog.ShowDialog() == true)
+                mediaPlayer.Open(new Uri(openFileDialog.FileName));
+
+            if (mediaPlayer.Source != null)
+            {
+                btnStart.IsEnabled = true;
+                lblFile.Content = "Selected file: "+mediaPlayer.Source.LocalPath;
             }
         }
     }
