@@ -4,7 +4,7 @@ Balance checker for headphones.
 
 You can use this tool to check if the volume level is the same from both sides of headphones.
 
-To use this you need a microphone and a pari of headphones.
+To use this you need a microphone and a pair of headphones.
 
 It's really simple to use, just select audio file you want to use and start the check.
 
